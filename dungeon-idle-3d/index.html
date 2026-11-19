@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dungeon Idle 3D</title>
+<meta name="description" content="An idle dungeon crawler for Android. Build your party and see how deep you can go!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #110f13;
+    --panel: #221e26;
+    --panel-light: #352f3a;
+    --outline: #08070a;
+    --gold: #f2c14e;
+    --green: #4e7238;
+    --text: #ffffff;
+    --dim: #9a92a0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    background: var(--ink);
+    color: var(--text);
+    font-family: "Silkscreen", ui-monospace, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  main {
+    width: 100%;
+    max-width: 880px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  .art {
+    flex: 0 0 300px;
+    border: 4px solid var(--outline);
+    background: var(--panel);
+    line-height: 0;
+  }
+  .art img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+  }
+  .info { flex: 1; }
+  h1 {
+    color: var(--gold);
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0 0 16px;
+    line-height: 1.1;
+  }
+  p { font-size: 17px; line-height: 1.5; margin: 0 0 24px; }
+  .links { display: flex; flex-direction: column; gap: 12px; max-width: 360px; }
+  .button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+    padding: 14px 16px;
+    background: var(--panel-light);
+    border: 3px solid var(--outline);
+    box-shadow: inset 3px 3px 0 #514858, inset -3px -3px 0 var(--outline);
+  }
+  .button:hover, .button:focus-visible { background: #433c49; }
+  .button.play { background: var(--green); box-shadow: inset 3px 3px 0 #8aa45a, inset -3px -3px 0 var(--outline); }
+  .button.play:hover, .button.play:focus-visible { background: #5b8443; }
+  .small { font-size: 13px; color: var(--dim); margin: 24px 0 0; }
+  .small a { color: var(--dim); }
+  @media (max-width: 680px) {
+    main { flex-direction: column; gap: 24px; }
+    .art { flex: none; width: min(300px, 100%); }
+    .info { text-align: center; }
+    .links { margin: 0 auto; }
+    h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="art">
+    <img src="corridor.png" width="720" height="1280" alt="A torchlit stone corridor in Dungeon Idle 3D, with glowing mushrooms at its end">
+  </div>
+  <div class="info">
+    <h1>Dungeon Idle 3D</h1>
+    <p>An idle dungeon crawler for Android. Build your party and see how deep you can go!</p>
+    <div class="links">
+      <a class="button play" href="https://play.google.com/store/apps/details?id=com.tehheavy.dungeonidle3d">Get it on Google Play</a>
+      <a class="button" href="https://discord.gg/3cDCzwQUVX">Join the Discord</a>
+      <a class="button" href="https://tehheavy.github.io/dungeon-idle-3d-privacy/">Privacy policy</a>
+    </div>
+    <p class="small">Made by Alex Dushevski<br>
+      Art by David E. Gervais, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></p>
+  </div>
+</main>
+</body>
+</html>
